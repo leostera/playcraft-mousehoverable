@@ -25,7 +25,7 @@ TheGame = pc.Game.extend('TheGame',
             */
 
             // and instead, we just start the game (otherwise you should do it in the loader callback below)
-            this.gameScene = new GameScene();
+            this.gameScene = new MainScene();
             this.addScene(this.gameScene);
         },
 
@@ -38,7 +38,7 @@ TheGame = pc.Game.extend('TheGame',
         {
             // resources are all ready, start the main game scene
             // (or a menu if you have one of those)
-            this.gameScene = new GameScene();
+            this.gameScene = new MainScene();
             this.addScene(this.gameScene);
         }
     });
