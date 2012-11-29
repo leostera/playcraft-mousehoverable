@@ -15,13 +15,15 @@ MainScene = pc.Scene.extend('MainScene',
 
             // all we need is the render system
             this.gameLayer.addSystem(new pc.systems.Render());
-            this.gameLayer.addSystem(new MouseHoverableSystem());
+            // this.gameLayer.addSystem(new MouseHoverableSystem());
+            this.gameLayer.addSystem(new DraggableSystem());
 
             this.box = pc.Entity.create(this.gameLayer);
 
             this.box.addComponent(pc.components.Rect.create({ color:'#ff0000' }));
-            this.box.addComponent(pc.components.Spatial.create({ x:200, y:200, w:300, h:300 }));
-            this.box.addComponent(MouseHoverableComponent.create());
+            this.box.addComponent(pc.components.Spatial.create({ x:100, y:100, w:150, h:150 }));
+            // this.box.addComponent(MouseHoverableComponent.create());
+            this.box.addComponent(DraggableComponent.create());
         },
 
         process:function ()

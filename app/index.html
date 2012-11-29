@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Farm Tour</title>
+        <title>Playcraft Playground</title>
         <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, width=device-width, height=device-height"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-        <script type="text/javascript" src="/lib/playcraft.min.js"></script>
+        <script type="text/javascript" src="/lib/playcraft.js"></script>
 
         <script>
             pc.start('pcGameCanvas', 'TheGame', 'scripts/', [
-                    'components/MouseHoverable.js'
-                  , 'systems/MouseHoverable.js'
+                    'components/Hoverable.js'
+                  , 'components/Draggable.js'
+                  , 'systems/Hoverable.js'
+                  , 'systems/Draggable.js'
                   , 'scenes/MainScene.js'
                   , 'game.js'
-                ]);
+                ],"lib/");
         </script>
 
     </head>
